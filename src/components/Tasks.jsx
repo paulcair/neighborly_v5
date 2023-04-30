@@ -12,7 +12,7 @@ const TaskCard = ({ name, details, imageURL }) => (
                 </div>
                 <button 
                     type="button"
-                    className="text-white w-full mt-2 border-[1px] p-2 border-[#A08850] bg-[#A08850] hover:bg-[#7C5B2E] hover:border-[#7C5B2E] rounded-full cursor-pointer"
+                    className="text-white mt-2 border-[1px] p-2 border-[#50A060] bg-[#50A060] hover:bg-[#3B744B] hover:border-[#3B744B] rounded-full cursor-pointer"
                 >
                 Add Tip
                 </button>
