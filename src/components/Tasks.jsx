@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useContract, useContractRead } from "@thirdweb-dev/react";
+import { useContract, useContractRead, useAddress } from "@thirdweb-dev/react";
 
 const contractAddress = "0xB2c8A7B59628D8c6c50cD88BC0c9b4Ca800387f9";
 const TaskCard = ({ name, details, imageURL }) => (
@@ -35,6 +35,7 @@ const TaskCard = ({ name, details, imageURL }) => (
 
 const Tasks = (props) => {
   const { contract } = useContract(contractAddress);
+  const address = useAddress();
   const { data: taskCount, isLoading: taskCountLoading } = useContractRead(contract, "getTaskCount");
   
   const { data: task3, isLoading: task3Loading } = useContractRead(contract, "getTask", [3]);
@@ -97,7 +98,6 @@ const Tasks = (props) => {
         imageURL={task4[2]}
       />
       </div>
-
         }
       </div>
     </div>

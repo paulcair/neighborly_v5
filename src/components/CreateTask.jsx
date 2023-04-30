@@ -25,7 +25,7 @@ const TaskSubmitButton = ({ contract }) => {
 };
 
 const CreateTask = (props) => {
-  
+  const address = useAddress();
   const { contract } = props;
 
   return (
@@ -50,8 +50,11 @@ const CreateTask = (props) => {
             <Input placeholder="Name" name="name" type="text"  />
             <Input placeholder="Description" name="description" type="text"/>
             <Input placeholder="Image URL" name="imageURL" type="text"  />  
-            <TaskSubmitButton contract={contract} />
-
+            { address ? (
+              <TaskSubmitButton contract={contract} />
+            ) : (
+              <div>Please connect your wallet.</div>
+            )}
         </div>
       </div>
     </div>
