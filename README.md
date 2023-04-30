@@ -17,11 +17,11 @@ click on the local host link that shows up in your terminal to open it locally o
 ## Screenshots
 
 ### Connect your wallet
-![Connect](Dragster.jpg)
+![Connect](connect.png)
 
 ### Submit tasks and view tasks that have been deployed to the contract
 
-![Submit Tasks](Dragster.jpg)
+![Submit Tasks](tasks.png)
 
 ## Contact us
 
