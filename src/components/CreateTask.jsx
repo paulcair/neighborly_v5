@@ -2,8 +2,6 @@ import React from "react";
 import { Web3Button, useAddress, useContract, useContractRead } from "@thirdweb-dev/react";
 
 
-// import { useContractFunction } from '@thirdweb-dev/react';
-
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
     placeholder={placeholder}
@@ -27,6 +25,7 @@ const TaskSubmitButton = ({ contract }) => {
 };
 
 const CreateTask = (props) => {
+  
   const { contract } = props;
 
   return (
@@ -37,7 +36,9 @@ const CreateTask = (props) => {
          Create a Task and start earning
         </h1>
         <p className="text-left my-2 text-white font-light md:w-9/12 w-11/12 text-base">
-          Show your community what you're working on and start earning tips from your neighbors
+          Show your community what you're working on and start earning tips from your neighbors. 
+          Once you've completed the Task, simply upload a photo of the completed task and the funds 
+          accumulated from tips will be instantly released to you.
         </p>
       </div>
 
@@ -48,7 +49,7 @@ const CreateTask = (props) => {
           <p className="mt-1 text-white text-center text-sm md:w-9/12">Fill in the details below</p>
             <Input placeholder="Name" name="name" type="text"  />
             <Input placeholder="Description" name="description" type="text"/>
-            <Input placeholder="Image URL" name="imageURL" type="text"  />       
+            <Input placeholder="Image URL" name="imageURL" type="text"  />  
             <TaskSubmitButton contract={contract} />
 
         </div>

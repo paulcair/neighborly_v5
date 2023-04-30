@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useContract, useContractRead } from "@thirdweb-dev/react";
 
 const contractAddress = "0xB2c8A7B59628D8c6c50cD88BC0c9b4Ca800387f9";
-
 const TaskCard = ({ name, details, imageURL }) => (
     <div className="w-full lg:flex m-4">
       <div
-        className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t-lg lg:rounded-t-none lg:rounded-l-lg text-center overflow-hidden"
+        className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t-none lg:rounded-t-l lg:rounded-l-lg text-center overflow-hidden"
         style={{ backgroundImage: `url(${imageURL})` }}
       ></div>
-      <div className="w-full lg:w-130 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b-lg lg:rounded-b-none lg:rounded-r-lg p-4 flex flex-col justify-between leading-normal">
+      <div className="w-full lg:w-130 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white bg-opacity-60 rounded-b-lg lg:rounded-b-none lg:rounded-r-lg p-4 flex flex-col justify-between leading-normal">
         <div className="w-full mb-8">
           <div className="text-gray-900 font-bold text-xl mb-2">{name}</div>
           <p className="text-gray-700 text-base">{details}</p>
@@ -17,7 +16,7 @@ const TaskCard = ({ name, details, imageURL }) => (
         <div className="flex space-x-2">
           <button
             type="button"
-            className="text-white w-28 p-2 bg-green-500 hover:bg-green-700 border border-green-500 hover:border-green-700 rounded-lg cursor-pointer"
+            className="text-white w-28 p-2 bg-green-800 hover:bg-green-900 border border-green-800 hover:border-green-900 rounded-lg cursor-pointer"
           >
             Add Tip
           </button>
