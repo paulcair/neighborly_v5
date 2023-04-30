@@ -12,5 +12,5 @@ Welcome to the neighborly app. To run the app clone this git repository and foll
 
 ## Contact us
 
-Paul Cairns - telegram: @PaulCairns
+Paul Cairns - telegram: @PaulCairns <br>
 Raph Goemans
